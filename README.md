@@ -1,7 +1,9 @@
 # exhibition_app
 Bethlehem Palette Club
 
-![Schema](/app/views/imgs/juried_art_exhibition_schema_v01.jpg "Bethlehem Palette Club - Annual Spring Juried Exhibition Schema")
+![Schema mvp](/app/views/imgs/jjuried_art_exhibition_schema_v02.jpg "Bethlehem Palette Club - Annual Spring Juried Exhibition Schema")
+
+![Schema extended](/app/views/imgs/juried_art_exhibition_schema_v01.jpg "extended schema")
 
 Summary
 
