@@ -38,7 +38,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>\
     <type label="Bit" length="0" sql="bit" quote=""/>\
   </group>\
-</datatypes><table x="625" y="207" name="exhibitions">\
+</datatypes><table x="625" y="202" name="exhibitions">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -68,6 +68,9 @@
 </row>\
 <row name="pick_up_deadline" null="0" autoincrement="0">\
 <datatype>DATETIME</datatype>\
+</row>\
+<row name="flyer_url" null="0" autoincrement="0">\
+<datatype>VARCHAR</datatype>\
 </row>\
 <key type="PRIMARY" name="">\
 <part>id</part>\
@@ -107,6 +110,9 @@
 <row name="password" null="0" autoincrement="0">\
 <datatype>VARCHAR(50)</datatype>\
 </row>\
+<row name="image_url" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
 <key type="PRIMARY" name="">\
 <part>id</part>\
 </key>\
@@ -136,6 +142,9 @@
 <row name="password" null="0" autoincrement="0">\
 <datatype>VARCHAR(50)</datatype>\
 </row>\
+<row name="image_rl" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
 <key type="PRIMARY" name="">\
 <part>id</part>\
 </key>\
@@ -161,7 +170,7 @@
 <part>id</part>\
 </key>\
 </table>\
-<table x="631" y="474" name="artworks">\
+<table x="630" y="495" name="artworks">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -213,6 +222,9 @@
 <default>NULL</default></row>\
 <row name="exhibition_id" null="0" autoincrement="0">\
 <datatype>INTEGER</datatype>\
+</row>\
+<row name="image_url" null="0" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
 </row>\
 <key type="PRIMARY" name="">\
 <part>id</part>\
