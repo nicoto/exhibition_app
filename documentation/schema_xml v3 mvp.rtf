@@ -1,0 +1,295 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 <?xml version="1.0" encoding="utf-8" ?>\
+<!-- SQL XML created by WWW SQL Designer, http://code.google.com/p/wwwsqldesigner/ -->\
+<!-- Active URL: https://socrates.devbootcamp.com/sql.html -->\
+<sql>\
+<datatypes db="mysql">\
+  <group label="Numeric" color="rgb(238,238,170)">\
+    <type label="Integer" length="0" sql="INTEGER" re="INT" quote=""/>\
+    <type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>\
+    <type label="Single precision" length="0" sql="FLOAT" quote=""/>\
+    <type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>\
+  </group>\
+\
+  <group label="Character" color="rgb(255,200,200)">\
+    <type label="Char" length="1" sql="CHAR" quote="'"/>\
+    <type label="Varchar" length="1" sql="VARCHAR" quote="'"/>\
+    <type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>\
+    <type label="Binary" length="1" sql="BINARY" quote="'"/>\
+    <type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>\
+    <type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>\
+  </group>\
+\
+  <group label="Date &amp; Time" color="rgb(200,255,200)">\
+    <type label="Date" length="0" sql="DATE" quote="'"/>\
+    <type label="Time" length="0" sql="TIME" quote="'"/>\
+    <type label="Datetime" length="0" sql="DATETIME" quote="'"/>\
+    <type label="Year" length="0" sql="YEAR" quote=""/>\
+    <type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>\
+  </group>\
+\
+  <group label="Miscellaneous" color="rgb(200,200,255)">\
+    <type label="ENUM" length="1" sql="ENUM" quote=""/>\
+    <type label="SET" length="1" sql="SET" quote=""/>\
+    <type label="Bit" length="0" sql="bit" quote=""/>\
+  </group>\
+</datatypes><table x="640" y="58" name="exhibitions">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="name" null="0" autoincrement="0">\
+<datatype>VARCHAR(512)</datatype>\
+</row>\
+<row name="subtitle" null="1" autoincrement="0">\
+<datatype>VARCHAR(512)</datatype>\
+<default>NULL</default></row>\
+<row name="start_date" null="0" autoincrement="0">\
+<datatype>DATE</datatype>\
+<default>'NULL'</default></row>\
+<row name="end_date" null="0" autoincrement="0">\
+<datatype>DATE</datatype>\
+<default>'NULL'</default></row>\
+<row name="website" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
+<row name="reception" null="1" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+<default>NULL</default></row>\
+<row name="opening" null="1" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+<default>NULL</default></row>\
+<row name="drop_off_deadline" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="pick_up_deadline" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="flyer_url" null="0" autoincrement="0">\
+<datatype>VARCHAR</datatype>\
+</row>\
+<row name="organizer" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
+<row name="location" null="1" autoincrement="0">\
+<datatype>VARCHAR(1000)</datatype>\
+<default>NULL</default></row>\
+<row name="criteria_descriptions" null="0" autoincrement="0">\
+<datatype>VARCHAR</datatype>\
+</row>\
+<row name="max_votes_per_juror" null="0" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>1</default></row>\
+<row name="created_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="updated_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="1182" y="548" name="artists">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="user_id" null="0" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<relation table="users" row="id" />\
+</row>\
+<row name="bio" null="1" autoincrement="0">\
+<datatype>MEDIUMTEXT</datatype>\
+<default>NULL</default></row>\
+<row name="website" null="1" autoincrement="0">\
+<datatype>VARCHAR(100)</datatype>\
+<default>NULL</default></row>\
+<row name="created_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="updated_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="portrait_url" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="640" y="543" name="artworks">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="title" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
+<row name="height" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="width" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="depth" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="medium" null="0" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+</row>\
+<row name="sold" null="0" autoincrement="0">\
+<datatype>BINARY</datatype>\
+<default>'0'</default></row>\
+<row name="asking_price" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="artist_id" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default><relation table="artists" row="id" />\
+</row>\
+<row name="year" null="0" autoincrement="0">\
+<datatype>DATE</datatype>\
+</row>\
+<row name="created_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="updated_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="description" null="1" autoincrement="0">\
+<datatype>MEDIUMTEXT</datatype>\
+<default>NULL</default></row>\
+<row name="image_url" null="0" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+</row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="1125" y="234" name="votes">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="juror_id" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default><relation table="jurors" row="id" />\
+</row>\
+<row name="exhibition_artworks_id" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default><relation table="exhibition_artworks" row="id" />\
+</row>\
+<row name="created_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="updated_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="critique" null="0" autoincrement="0">\
+<datatype>MEDIUMTEXT</datatype>\
+</row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="856" y="457" name="exhibition_artworks">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="exhibition_id" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default><relation table="exhibitions" row="id" />\
+</row>\
+<row name="artwork_id" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default><relation table="artworks" row="id" />\
+</row>\
+<row name="asking_price" null="1" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="dropoff_date" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+<default>'NULL'</default></row>\
+<row name="pickup_date" null="1" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+<default>NULL</default></row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="856" y="183" name="users">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="firstname" null="0" autoincrement="0">\
+<datatype>VARCHAR</datatype>\
+</row>\
+<row name="lastname" null="0" autoincrement="0">\
+<datatype>VARCHAR(60)</datatype>\
+</row>\
+<row name="username" null="0" autoincrement="0">\
+<datatype>VARCHAR(50)</datatype>\
+</row>\
+<row name="password" null="0" autoincrement="0">\
+<datatype>VARCHAR</datatype>\
+</row>\
+<row name="title" null="0" autoincrement="0">\
+<datatype>VARCHAR(10)</datatype>\
+</row>\
+<row name="association" null="1" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+<default>NULL</default></row>\
+<row name="email1" null="0" autoincrement="0">\
+<datatype>VARCHAR(256)</datatype>\
+</row>\
+<row name="created_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="updated_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="1184" y="60" name="jurors">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="user_id" null="0" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<relation table="users" row="id" />\
+</row>\
+<row name="bio" null="1" autoincrement="0">\
+<datatype>MEDIUMTEXT</datatype>\
+<default>NULL</default></row>\
+<row name="created_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<row name="updated_at" null="0" autoincrement="0">\
+<datatype>DATETIME</datatype>\
+</row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+<table x="857" y="59" name="exhibition_jurors">\
+<row name="id" null="1" autoincrement="1">\
+<datatype>INTEGER</datatype>\
+<default>NULL</default></row>\
+<row name="exhibition_id" null="0" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<relation table="exhibitions" row="id" />\
+</row>\
+<row name="juror_id" null="0" autoincrement="0">\
+<datatype>INTEGER</datatype>\
+<relation table="jurors" row="id" />\
+</row>\
+<key type="PRIMARY" name="">\
+<part>id</part>\
+</key>\
+</table>\
+</sql>\
+}
