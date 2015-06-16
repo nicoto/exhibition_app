@@ -38,7 +38,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>\
     <type label="Bit" length="0" sql="bit" quote=""/>\
   </group>\
-</datatypes><table x="640" y="58" name="exhibitions">\
+</datatypes><table x="640" y="57" name="exhibitions">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -78,9 +78,9 @@
 <row name="location" null="1" autoincrement="0">\
 <datatype>VARCHAR(1000)</datatype>\
 <default>NULL</default></row>\
-<row name="criteria_descriptions" null="0" autoincrement="0">\
+<row name="criteria_descriptions (*)" null="1" autoincrement="0">\
 <datatype>VARCHAR</datatype>\
-</row>\
+<default>NULL</default></row>\
 <row name="max_votes_per_juror" null="0" autoincrement="0">\
 <datatype>INTEGER</datatype>\
 <default>1</default></row>\
@@ -94,7 +94,7 @@
 <part>id</part>\
 </key>\
 </table>\
-<table x="1181" y="458" name="artists">\
+<table x="1181" y="468" name="artists">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -179,7 +179,7 @@
 </row>\
 <row name="exhibition_artworks_id" null="1" autoincrement="0">\
 <datatype>INTEGER</datatype>\
-<default>NULL</default><relation table="exhibition_artworks" row="id" />\
+<default>NULL</default><relation table="gatherings" row="id" />\
 </row>\
 <row name="created_at" null="0" autoincrement="0">\
 <datatype>DATETIME</datatype>\
@@ -201,7 +201,7 @@
 <part>id</part>\
 </key>\
 </table>\
-<table x="856" y="457" name="exhibition_artworks">\
+<table x="857" y="465" name="gatherings">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -264,7 +264,7 @@
 <part>id</part>\
 </key>\
 </table>\
-<table x="1184" y="60" name="jurors">\
+<table x="1183" y="57" name="jurors">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -285,7 +285,7 @@
 <part>id</part>\
 </key>\
 </table>\
-<table x="857" y="59" name="exhibition_jurors">\
+<table x="857" y="57" name="exhibition_jurors">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
@@ -301,7 +301,7 @@
 <part>id</part>\
 </key>\
 </table>\
-<table x="1179" y="678" name="criteria">\
+<table x="1178" y="692" name="criteria">\
 <row name="id" null="1" autoincrement="1">\
 <datatype>INTEGER</datatype>\
 <default>NULL</default></row>\
